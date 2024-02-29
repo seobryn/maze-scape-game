@@ -1,13 +1,17 @@
-import { Canvas } from '@react-three/fiber'
-import { Experience } from './components/Experience'
+import { Canvas } from "@react-three/fiber";
+import { Experience } from "./components/Experience";
+import { Suspense } from "react";
+import { Physics } from "@react-three/rapier";
 
 export function Game() {
-
   return (
-    <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
-      {/* eslint-disable-next-line react/no-unknown-property */}
+    <Canvas shadows camera={{ position: [8, 8, 8], fov: 70 }}>
       <color attach="background" args={["#eeeeee"]} />
-      <Experience />
+      <Suspense>
+        <Physics debug>
+          <Experience />
+        </Physics>
+      </Suspense>
     </Canvas>
-  )
+  );
 }

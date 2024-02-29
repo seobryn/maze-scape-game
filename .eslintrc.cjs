@@ -27,6 +27,7 @@ module.exports = {
     "react-refresh"
   ],
   "rules": {
+    "react/no-unknown-property": "off",
     "react/jsx-no-target-blank": "off",
     "react-refresh/only-export-components": [
       "warn",
