@@ -1,6 +1,7 @@
 import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Guy } from "./Characters/Guy";
 import { Ground } from "./Buildings/Ground";
+import { CharacterController } from "./CharacterController";
 
 export function Experience() {
   return (
@@ -9,7 +10,7 @@ export function Experience() {
       <ambientLight intensity={0.5} />
       <Sky />
       <OrbitControls />
-      <Guy position={[0,2,0]}/>
+      <CharacterController Model={Guy} />
       <Ground />
     </>
   );
